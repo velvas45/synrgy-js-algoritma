@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algoritma in js</title>
+</head>
+<body>
+    <h1>Soal Number 2</h1>
+    <script>
+        const inputTanggal = prompt('Hari apa sekarang ?');
+        const inputNumber = prompt('Masukkan jumlah bilangan : ');
+
+        // function hari besok
+        function hariApaBesok(hari){
+            // dengan if else
+            if(hari.toLowerCase() === "senin"){
+                console.log('Hari Besok adalah : selasa');
+            } else if(hari.toLowerCase() === "selasa"){
+                console.log('Hari Besok adalah : rabu')
+            }else if(hari.toLowerCase() === "rabu"){
+                console.log('Hari Besok adalah : kamis');
+            }else if(hari.toLowerCase() === "kamis"){
+                console.log('Hari Besok adalah : jumat');
+            }else if(hari.toLowerCase() === "jumat"){
+                console.log('Hari Besok adalah : sabtu');
+            }else if(hari.toLowerCase() === "sabtu"){
+                console.log('Hari Besok adalah : minggu');
+            }else{
+                console.log('Hari Besok adalah : senin')
+            }
+
+            // dengan switch case
+            switch (hari.toLowerCase()) {
+                case "senin":
+                console.log('Hari Besok adalah : selasa')
+                    break;
+                    case "selasa":
+                    console.log('Hari Besok adalah : rabu')
+                    break;
+                    case "rabu":
+                    console.log('Hari Besok adalah : kamis')
+                    break;
+                    case "kamis":
+                    console.log('Hari Besok adalah : jumat')
+                    break;
+                    case "jumat":
+                    console.log('Hari Besok adalah : sabtu')
+                    break;
+                    case "sabtu":
+                    console.log('Hari Besok adalah : minggu')
+                    break;
+            
+                default:
+                console.log('Hari Besok adalah : senin')
+                    break;
+            }
+        }
+
+        // function bilangan
+        function bilangan(number){
+            // check bilangan prima
+            let pembagi = 0 ;
+            for(let i=1; i<=number; i++){
+                if(number%i==0){
+                    console.log('bilangan prima :',i);
+                    pembagi++;
+                }
+            }
+
+            // check bilangan genap
+            for(let i=1; i<number; i++){
+                if(i%2==0){
+                    console.log('bilangan genap :', i);
+                }
+            }
+
+            // check bilangan ganjil
+            for(let i=1; i<number; i++){
+                if(i%2==1){
+                    console.log('bilangan ganjil :', i);
+                }
+            }
+        }
+
+        // pemanggilan function
+        hariApaBesok(inputTanggal);
+        bilangan(inputNumber);
+
+    </script>
+</body>
+</html>
